@@ -51,7 +51,7 @@ removeRow.addEventListener('click', () => {
     addRow.disabled = false;
   }
 
-  if (rows.length <= 3) {
+  if (rows.length <= MIN_ROWS + 1) {
     removeRow.disabled = true;
   }
 
@@ -92,7 +92,7 @@ removeColumn.addEventListener('click', () => {
       addColumn.disabled = false;
     }
 
-    if (row.children.length <= 3) {
+    if (row.children.length <= MIN_COLS + 1) {
       removeColumn.disabled = true;
     }
 
