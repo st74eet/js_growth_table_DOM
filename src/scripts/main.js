@@ -11,9 +11,9 @@ const addColumn = container.querySelector('.append-column');
 const removeColumn = container.querySelector('.remove-column');
 
 const MAX_ROWS = 10;
-const MIN_ROWS = 1;
+const MIN_ROWS = 2;
 const MAX_COLS = 10;
-const MIN_COLS = 1;
+const MIN_COLS = 2;
 
 addRow.addEventListener('click', () => {
   const rows = [...tBody.querySelectorAll('tr')];
@@ -96,6 +96,6 @@ removeColumn.addEventListener('click', () => {
       removeColumn.disabled = true;
     }
 
-    row.firstElementChild.remove();
+    row.lastElementChild.remove();
   });
 });
